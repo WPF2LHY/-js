@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript中有insertBefore方法,可惜却没有insertAfter方法?用如下函数实现</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function insertAfter(newChild, refChild) {
+			var parElem = refChild.parentNode;
+			if (parElem.lastChild == refChild) {
+				refChild.appendChild(newChild);
+			} else {
+				parElem.insertBefore(newChild, refChild.nextSibling);
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript实现字符串长度截取</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function cutstr(str, len) {
+        var temp;
+        var icount = 0;
+        var patrn = /[^\x00-\xff]/;
+        var strre = "";
+        for (var i = 0; i < str.length; i++) {
+            if (icount < len - 1) {
+                temp = str.substr(i, 1);
+                if (patrn.exec(temp) == null) {
+                    icount = icount + 1
+                } else {
+                    icount = icount + 2
+                }
+                strre += temp
+            } else {
+                break
+            }
+        }
+		
+        return strre + "..."		
+    }
+	 console.log(cutstr("dsadsad", 4));
+	</script>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript加载样式文件</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function LoadStyle(url) {
+			try {
+				document.createStyleSheet(url)
+			} catch (e) {
+				var cssLink = document.createElement('link');
+				cssLink.rel = 'stylesheet';
+				cssLink.type = 'text/css';
+				cssLink.href = url;
+				var head = document.getElementsByTagName('head')[0];
+				head.appendChild(cssLink)
+			}
+		}
+	</script>
+</html>

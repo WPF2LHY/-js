@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript清除空格</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		String.prototype.trim = function() {
+			var reExtraSpace = /^\s*(.*?)\s+$/;
+			return this.replace(reExtraSpace, "$1")
+		}
+	</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript元素显示的通用方法</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function $(id) {
+			return !id ? null : document.getElementById(id);
+		}
+
+		function display(id) {
+			var obj = $(id);
+			if (obj.style.visibility) {
+				obj.style.visibility = obj.style.visibility == 'visible' ? 'hidden' : 'visible';
+			} else {
+				obj.style.display = obj.style.display == '' ? 'none' : '';
+			}
+		}
+	</script>
+</html>

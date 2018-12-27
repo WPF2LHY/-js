@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript加入收藏夹</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function AddFavorite(sURL, sTitle) {
+			try {
+				window.external.addFavorite(sURL, sTitle)
+			} catch (e) {
+				try {
+					window.sidebar.addPanel(sTitle, sURL, "")
+				} catch (e) {
+					alert("加入收藏失败，请使用Ctrl+D进行添加")
+				}
+			}
+		}
+	</script>
+</html>

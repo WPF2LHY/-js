@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript清除脚本内容</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function stripscript(s) {
+			return s.replace(/<script.*?>.*?<\/script>/ig, '');
+		}
+	</script>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript获取cookie值</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function getCookie(name) {
+			var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+			if (arr != null) return unescape(arr[2]);
+			return null
+		}
+	</script>
+</html>

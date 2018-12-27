@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript还原html标签</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function HtmlDecode(text) {
+			return text.replace(/&amp;/g, '&').replace(/&quot;/g, '\"').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+		}
+	</script>
+</html>

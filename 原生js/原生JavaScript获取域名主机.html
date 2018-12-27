@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript获取域名主机</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function getHost(url) {
+			var host = "null";
+			if (typeof url == "undefined" || null == url) {
+				url = window.location.href;
+			}
+			var regex = /^\w+\:\/\/([^\/]*).*/;
+			var match = url.match(regex);
+			if (typeof match != "undefined" && null != match) {
+				host = match[1];
+			}
+			return host;
+		}
+		console.log(getHost('https://www.baidu.com/s?wd=%E6%96%B0%E6%B5%AA%E4%BA%91&rsv_spt=1&rsv_iqid=0xbb2bc2850003b645&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=7&rsv_sug1=6&rsv_sug7=100'))
+	</script>
+</html>

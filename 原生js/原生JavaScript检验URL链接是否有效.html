@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript检验URL链接是否有效</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function getUrlState(URL) {
+			var xmlhttp = new ActiveXObject("microsoft.xmlhttp");
+			xmlhttp.Open("GET", URL, false);
+			try {
+				xmlhttp.Send();
+			} catch (e) {} finally {
+				var result = xmlhttp.responseText;
+				if (result) {
+					if (xmlhttp.Status == 200) {
+						return (true);
+					} else {
+						return (false);
+					}
+				} else {
+					return (false);
+				}
+			}
+		}
+	</script>
+</html>

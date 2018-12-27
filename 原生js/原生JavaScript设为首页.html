@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript设为首页</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function setHomepage() {
+			if (document.all) {
+				document.body.style.behavior = 'url(#default#homepage)';
+				document.body.setHomePage('http://***')
+			} else if (window.sidebar) {
+				if (window.netscape) {
+					try {
+						netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect")
+					} catch (e) {
+						alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true")
+					}
+				}
+				var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+				prefs.setCharPref('browser.startup.homepage', 'http://***')
+			}
+		}
+	</script>
+</html>
