@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript用正则表达式清除html代码中的脚本</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function clear_script() {
+			K1.value = K1.value.replace(
+				/<script.*?>[\s\S]*?<\/script>|\s+on[a-zA-Z]{3,16}\s?=\s?"[\s\S]*?"|\s+on[a-zA-Z]{3,16}\s?=\s?'[\s\S]*?'|\s+on[a-zA-Z]{3,16}\s?=[^ >]+/ig,
+				"");
+		}
+	</script>
+</html>

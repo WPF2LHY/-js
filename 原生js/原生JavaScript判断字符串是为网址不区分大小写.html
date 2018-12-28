@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断字符串是为网址不区分大小写</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function isValidURL(chars) {
+			var re = /^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(\S+\.\S+)$/;
+			if (!isNULL(chars)) {
+				chars = jsTrim(chars);
+				if (chars.match(re) == null)
+					return false;
+				else
+					return true;
+			}
+			return false;
+		}
+	</script>
+</html>

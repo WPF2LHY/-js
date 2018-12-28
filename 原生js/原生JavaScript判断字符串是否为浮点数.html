@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断字符串是否为浮点数</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function isFloat(str) {
+			for (i = 0; i < str.length; i++) {
+				if ((str.charAt(i) < "0" || str.charAt(i) > "9") && str.charAt(i) != '.') {
+					return false;
+				}
+			}
+			return true;
+		}
+	</script>
+</html>

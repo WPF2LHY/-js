@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断IE版本号（既简洁、又向后兼容！）</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var _IE = (function() {
+			var v = 3,
+				div = document.createElement('div'),
+				all = div.getElementsByTagName('i');
+			while (
+				div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+				all[0]
+			);
+			return v > 4 ? v : false;
+		}());
+	</script>
+</html>

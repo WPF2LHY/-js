@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断是否为邮箱</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function isEmail(str) {
+			var re = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+			if (re.test(str) != true) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+	</script>
+</html>

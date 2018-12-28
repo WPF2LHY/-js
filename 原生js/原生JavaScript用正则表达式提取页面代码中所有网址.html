@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript用正则表达式提取页面代码中所有网址</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var aa = document.documentElement.outerHTML.match(
+			/(url\(|src=|href=)[\"\']*([^\"\'\(\)\<\>\[\] ]+)[\"\'\)]*|(http:\/\/[\w\-\.]+[^\"\'\(\)\<\>\[\] ]+)/ig).join(
+			"\r\n").replace(/^(src=|href=|url\()[\"\']*|[\"\'\>\) ]*$/igm, "");
+		alert(aa)
+	</script>
+</html>

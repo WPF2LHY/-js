@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript动态执行VBScript脚本</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function vbscript() {
+			try {
+				var script = document.getElementById("K1").value;
+				if (script.trim() == "") return;
+				window.execScript('On Error Resume Next \n' + script +
+					'\n If Err.Number<>0 Then \n MsgBox "请输入正确的VBScript脚本!",48,"脚本错误!" \n End If', "vbscript")
+			} catch (e) {
+				alert(e.message);
+			}
+		}
+	</script>
+</html>

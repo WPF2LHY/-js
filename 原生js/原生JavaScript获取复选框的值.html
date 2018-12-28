@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript获取复选框的值</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function get_checkbox_value(field) {
+			if (field && field.length) {
+				for (var i = 0; i < field.length; i++) {
+					if (field[i].checked && !field[i].disabled) {
+						return field[i].value;
+					}
+				}
+			} else {
+				return;
+			}
+		}
+	</script>
+</html>

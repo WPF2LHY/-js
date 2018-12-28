@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript获取页面宽度</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function getPageWidth() {
+			var g = document,
+				a = g.body,
+				f = g.documentElement,
+				d = g.compatMode == "BackCompat" ?
+				a :
+				g.documentElement;
+			return Math.max(f.scrollWidth, a.scrollWidth, d.clientWidth);
+		}
+	</script>
+</html>

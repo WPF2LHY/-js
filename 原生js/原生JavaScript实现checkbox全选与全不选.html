@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript实现checkbox全选与全不选</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function checkAll() {
+			var selectall = document.getElementById("selectall");
+			var allbox = document.getElementsByName("allbox");
+			if (selectall.checked) {
+				for (var i = 0; i < allbox.length; i++) {
+					allbox[i].checked = true;
+				}
+			} else {
+				for (var i = 0; i < allbox.length; i++) {
+					allbox[i].checked = false;
+				}
+			}
+		}
+	</script>
+</html>

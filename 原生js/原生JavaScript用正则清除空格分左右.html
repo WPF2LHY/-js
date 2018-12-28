@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript用正则清除空格分左右</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function ltrim(s) {
+			return s.replace(/^(\s*|　*)/, "");
+		}
+
+		function rtrim(s) {
+			return s.replace(/(\s*|　*)$/, "");
+		}
+
+		function trim(s) {
+			return ltrim(rtrim(s));
+		}
+	</script>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript用正则表达式清除相同的数组(低效率)</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		Array.prototype.unique = function() {
+			return this.reverse().join(",").match(/([^,]+)(?!.*\1)/ig).reverse();
+		}
+	</script>
+</html>

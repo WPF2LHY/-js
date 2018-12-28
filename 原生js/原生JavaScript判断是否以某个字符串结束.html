@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断是否以某个字符串结束</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		String.prototype.endWith = function(s) {
+			var d = this.length - s.length;
+			return (d >= 0 && this.lastIndexOf(s) == d)
+		}
+	</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断是否为客户端设备</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function client(o) {
+			var b = navigator.userAgent.toLowerCase();
+			var t = false;
+			if (o == 'isOP') {
+				t = b.indexOf('opera') > -1;
+			}
+			if (o == 'isIE') {
+				t = b.indexOf('msie') > -1;
+			}
+			if (o == 'isFF') {
+				t = b.indexOf('firefox') > -1;
+			}
+			return t;
+		}
+	</script>
+</html>

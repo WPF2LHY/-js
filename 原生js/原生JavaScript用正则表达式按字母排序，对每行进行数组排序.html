@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript用正则表达式按字母排序，对每行进行数组排序</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function SetSort() {
+			var text = K1.value.split(/[\r\n]/).sort().join("\r\n"); //顺序
+			var test = K1.value.split(/[\r\n]/).sort().reverse().join("\r\n"); //反序
+			K1.value = K1.value != text ? text : test;
+		}
+	</script>
+</html>

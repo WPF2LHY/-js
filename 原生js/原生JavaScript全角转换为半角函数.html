@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript全角转换为半角函数</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function ToCDB(str) {
+			var result = '';
+			for (var i = 0; i < str.length; i++) {
+				code = str.charCodeAt(i);
+				if (code >= 65281 && code <= 65374) {
+					result += String.fromCharCode(str.charCodeAt(i) - 65248);
+				} else if (code == 12288) {
+					result += String.fromCharCode(str.charCodeAt(i) - 12288 + 32);
+				} else {
+					result += str.charAt(i);
+				}
+			}
+			return result;
+		}
+	</script>
+</html>

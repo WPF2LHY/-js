@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript获取移动设备屏幕宽度</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function getScreenWidth() {
+			var smallerSide = Math.min(screen.width, screen.height);
+			var fixViewPortsExperiment = rendererModel.runningExperiments.FixViewport || rendererModel.runningExperiments.fixviewport;
+			var fixViewPortsExperimentRunning = fixViewPortsExperiment && (fixViewPortsExperiment.toLowerCase() === "new");
+			if (fixViewPortsExperiment) {
+				if (this.isAndroidMobileDevice() && !this.isNewChromeOnAndroid()) {
+					smallerSide = smallerSide / window.devicePixelRatio;
+				}
+			}
+			return smallerSide;
+		}
+	</script>
+</html>

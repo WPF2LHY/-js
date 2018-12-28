@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript跨浏览器添加事件</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function addEvt(oTarget, sEvtType, fnHandle) {
+			if (!oTarget) {
+				return;
+			}
+			if (oTarget.addEventListener) {
+				oTarget.addEventListener(sEvtType, fnHandle, false);
+			} else if (oTarget.attachEvent) {
+				oTarget.attachEvent("on" + sEvtType, fnHandle);
+			} else {
+				oTarget["on" + sEvtType] = fnHandle;
+			}
+		}
+	</script>
+</html>

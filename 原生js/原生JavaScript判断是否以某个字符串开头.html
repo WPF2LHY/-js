@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断是否以某个字符串开头</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		String.prototype.startWith = function(s) {
+			return this.indexOf(s) == 0
+		}
+	</script>
+</html>

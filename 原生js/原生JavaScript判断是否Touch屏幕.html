@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript判断是否Touch屏幕</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function isTouchScreen() {
+			return (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch);
+		}
+	</script>
+</html>

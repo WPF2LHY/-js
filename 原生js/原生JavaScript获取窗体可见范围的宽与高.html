@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>原生JavaScript获取窗体可见范围的宽与高</title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		function getViewSize() {
+			var de = document.documentElement;
+			var db = document.body;
+			var viewW = de.clientWidth == 0 ? db.clientWidth : de.clientWidth;
+			var viewH = de.clientHeight == 0 ? db.clientHeight : de.clientHeight;
+			return Array(viewW, viewH);
+		}
+	</script>
+</html>
